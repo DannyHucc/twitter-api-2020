@@ -316,8 +316,6 @@ const userController = {
         })
       ])
 
-      console.log(user.toJSON())
-
       if (!user) return res.status(404).json({ status: 'error', message: '使用者不存在' })
       if (!user.Followers.length) return res.status(200).json({ status: 'success', message: '無跟隨者資料' })
 
